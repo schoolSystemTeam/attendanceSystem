@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<mete charset="UTF-8">
+<title>ƒTƒ“ƒvƒ‹</title>
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+$(function(){
+	$("a").click(function(){
+		$("img").attr("src",$(this).attr("href"))
+				.attr("alt",$(this).text());
+		return false;
+	});
+});
+</script>
+</head>
+<body>
+	<ul>
+		<li><a href="img/dog.jpg">Œ¢</a></li>
+		<li><a href="img/img01.jpg">‰æ‘œ1</a></li>
+		<li><a href="img/img02.jpg">‰æ‘œ2</a></li>
+		<li><a href="img/img03.jpg">‰æ‘œ3</a></li>
+	</ul>
+	<p><img src="img/cat.jpg" alt="”L"></p>
+</body>
+</html>
+
