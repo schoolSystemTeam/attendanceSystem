@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+body{
+ background-color: #fffaf0;
+}
+
+.float-left{
+	float: left;
+}
+.clearfix:after{
+	content:"";
+	display: block;
+	clear: both;
+}
+
+.box-pink{
+	
+}
+
+/* 共通のタイトルとユーザー情報,ログアウトのリンクを入れるbox*/
+
+.title{
+	width: 70%;
+	margin: 0 auto;
+}
+
+/*メニューバーを格納するボックス*/
+
+.menu{
+	width: 100%;
+}
+
+/*ページのメインコンテンツを格納するボックス*/
+
+.main-countainer{
+	width: 100%;
+	
+}
+.footer{
+	width: 100%;
+}
+
+h1{
+  	text-align: center;
+  	background-color: #00bfff;
+	padding: 10px,10px,10px,2px;
+	font-famliy: "HGP創英角ゴシックUB","HGSゴシックE",sans-serif;
+	border: 3px double ;
+}
+
+/*メニューバーCSS*/
+
+#dropmenu{
+
+	  list-style-type: none;
+
+	  width: 80%;
+
+	  height: 40px;
+
+	  margin: 30px auto 300px;
+
+	  padding: 0;
+
+	  background: #8a9b0f;
+
+	  border-bottom: 5px solid #535d09;
+
+	  border-radius: 3px 3px 0 0;
+
+	}
+
+	#dropmenu li{
+
+	  position: relative;
+
+	  width: 20%;
+
+	  float: left;
+
+	  margin: 0;
+
+	  padding: 0;
+
+	  text-align: center;
+
+	}
+
+	#dropmenu li a{
+
+	  display: block;
+
+	  margin: 0;
+
+	  padding: 15px 0 11px;
+
+	  color: #fff;
+
+	  font-size: 14px;
+
+	  font-weight: bold;
+
+	  line-height: 1;
+
+	  text-decoration: none;
+
+	}
+
+	#dropmenu li:hover > a{
+
+	  background: #6e7c0c;
+
+	  color: #eff7b1;
+
+	}
+
+	#dropmenu > li:hover > a{
+
+	  border-radius: 3px 3px 0 0;
+
+	}
+
+	#dropmenu li ul{
+
+	  list-style: none;
+
+	  position: absolute;
+	  
+	  width: 50%;
+
+	  top: 100%;
+
+	  left: 0;
+
+	  margin: 0;
+
+	  padding: 0;
+
+	  border-radius: 0 0 3px 3px;
+
+	}
+
+	#dropmenu li:last-child ul{
+
+	  left: -100%;
+
+	  width: 100%
+
+	}
+
+	#dropmenu li ul li{
+
+	  overflow: hidden;
+
+	  width: 200%;
+
+	  height: 0;
+
+	  color: #fff;
+
+	  -moz-transition: .2s;
+
+	  -webkit-transition: .2s;
+
+	  -o-transition: .2s;
+
+	  -ms-transition: .2s;
+
+	  transition: .2s;
+	  
+	}
+
+	#dropmenu li ul li a{
+
+	  padding: 13px 15px;
+
+	  background: #6e7c0c;
+	  
+	  text-align: left;
+
+	  font-size: 12px;
+
+	  font-weight: normal;
+
+	}
+
+	#dropmenu li:hover ul li{
+
+	  overflow: visible;
+
+	  height: 38px;
+
+	  border-top: 1px solid #7c8c0e;
+
+	  border-bottom: 1px solid #616d0b;
+
+	}
+
+	#dropmenu li:hover ul li:first-child{
+
+
+	}
+
+	#dropmenu li:hover ul li:last-child{
+
+	  border-bottom: 0;
+
+	}
+
+	#dropmenu li:hover ul li:last-child a{
+
+	  border-radius: 0 0 3px 3px;
+
