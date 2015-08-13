@@ -96,7 +96,7 @@
 	text-align: center;
 }
 
-/* ユーザー登録画面用CSS */
+/* ユーザー登録/ユーザー設定変更画面用CSS */
 .insertUser{
 	background-color: #FFFF99;
 	width:30%;
@@ -108,6 +108,35 @@
 .insertUser p{
 	text-align: center;
 }
+
+
+/* 勤務時間表(全体)画面用 */
+.workTime{
+	width:80%;
+	padding-left: 10px;
+}
+.selectbox{
+	border: 2px solid #000000;
+	background-color: #d7d7d7;
+	width: 450px;
+	height: auto;
+}
+
+.worksheet .record{
+	background: #d2d2d2;
+}
+
+.worksheet tr{
+	text-align: center;
+}
+.worksheet tr:nth-child(even){
+	background: #afeeee;
+}
+
+.worksheet p{
+	margin-left:50%;
+}
+	
 
 /*
 エラー画面用CSS
@@ -134,7 +163,6 @@
 }
 
 #errorMsg{
-
 	height: auto;
 	margin: 0 auto;
 	margin-top: 50px;
@@ -143,3 +171,4 @@
 	width:30%;
 	font-weight: bold;
 }
+
