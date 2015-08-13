@@ -136,7 +136,7 @@
 .worksheet p{
 	margin-left:50%;
 }
-	
+
 
 /*
 エラー画面用CSS
@@ -172,3 +172,75 @@
 	font-weight: bold;
 }
 
+/*休日設定用CSS*/
+
+#holidayListTitle{
+
+	width: 20%;
+	border: inset 2px #BDBDBD;
+	background-color: #BCF5A9;
+	margin:0 auto;
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+	margin-bottom: 40px;
+
+}
+
+#holidaybox{
+
+	border: 2px solid #333B3E;
+	background-color: #FFFF99;
+	margin: 0 auto;
+}
+
+.holidayForm{
+	border: 1px solid #333B3E;
+	background-color: #FFFF99;
+	margin: 0 auto;
+}
+
+#holidayFormTitle{
+
+	width: 800px;
+	margin:0 auto;
+	border-bottom :1px solid #FFFFFF;
+	background: #7CADB6;
+}
+
+
+
+dl{
+	width:800px;
+	margin:10px auto;
+}
+
+dl dt{
+	background: #7CADB6;
+	border-bottom:1px solid #FFFFFF;
+	cursor: pointer;
+}
+
+dl dd{
+	border: 1px solid #FFFFFF;
+}
+
+.holidaylist{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.holidaylist .record{
+	background: #d2d2d2;
+}
+
+.holidaylist tr{
+	text-align: center;
+}
+.holidaylist tr:nth-child(even){
+	background: #afeeee;
+}
+
+.holidaylist p{
+	margin-left:50%;
+}
