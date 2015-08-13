@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 body{
  background-color: #fffaf0;
@@ -51,44 +51,27 @@ h1{
 /*メニューバーCSS*/
 
 #dropmenu{
+	list-style-type: none;
+	width: 80%;
+	height: 40px;
+	margin: 30px auto 300px;
+	padding: 0;
+	background: #8a9b0f;
+	border-bottom: 5px solid #535d09;
+	border-radius: 3px 3px 0 0;
+}
 
-	  list-style-type: none;
+#dropmenu li{
+	position: relative;
+	width: 20%;
+	float: left;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
 
-	  width: 80%;
-
-	  height: 40px;
-
-	  margin: 30px auto 300px;
-
-	  padding: 0;
-
-	  background: #8a9b0f;
-
-	  border-bottom: 5px solid #535d09;
-
-	  border-radius: 3px 3px 0 0;
-
-	}
-
-	#dropmenu li{
-
-	  position: relative;
-
-	  width: 20%;
-
-	  float: left;
-
-	  margin: 0;
-
-	  padding: 0;
-
-	  text-align: center;
-
-	}
-
-	#dropmenu li a{
-
-	  display: block;
+#dropmenu li a{
+	display: block;
 
 	  margin: 0;
 
