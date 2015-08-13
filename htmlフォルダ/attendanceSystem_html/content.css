@@ -1,1 +1,15 @@
 ﻿@charset "UTF-8";
+
+/* パスワード変更画面用CSS */
+
+.changePass{
+	background-color: #FFFF99;
+	width:30%;
+	height: auto;
+	margin:0 auto;
+	border: 2px solid #000000;
+}
+
+.changePass p{
+	text-align: center;
+}
