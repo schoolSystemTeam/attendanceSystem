@@ -109,4 +109,41 @@
 	text-align: center;
 }
 
+
 /* 勤務時間表(全体)画面用 */
+
+/*
+エラー画面用CSS
+作成者：水島創太
+作成日：2015/8/13
+更新日：
+更新者：
+備考：
+*/
+
+#errorTitle{
+	background-color: #F6CECE;
+	width:30%;
+	height: auto;
+	margin:0 auto;
+	border: 2px solid #F6CECE;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	font-weight: bold;
+	font-size: large;
+}
+
+#errorMsg{
+
+	height: auto;
+	margin: 0 auto;
+	margin-top: 50px;
+	border: none;
+	border: none;
+	width:30%;
+	font-weight: bold;
+}
+
