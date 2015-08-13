@@ -96,7 +96,7 @@
 	text-align: center;
 }
 
-/* ユーザー登録画面用CSS */
+/* ユーザー登録/ユーザー設定変更画面用CSS */
 .insertUser{
 	background-color: #FFFF99;
 	width:30%;
@@ -108,3 +108,5 @@
 .insertUser p{
 	text-align: center;
 }
+
+/* 勤務時間表(全体)画面用 */
