@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<mete charset="UTF-8">
+<title>サンプル</title>
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+$(function(){
+	$("img").mousemove(function(e){
+		$("p").html("現在のX座標"+e.clientX+"<br>
+					現在のY座標"+e.clientY);
+	});
+});
+</script>
+</head>
+<body>
+	<img src="img/cat.jpg" alt="猫">
+	<p></p>
+</body>
+</html>
+

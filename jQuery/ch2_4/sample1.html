@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<mete charset="UTF-8">
+<title>サンプル</title>
+<script src="../jquery-1.11.3.min.js"></script>
+<script>
+$(function(){
+	$("button").click(function(){
+		$("p").text($("input").val()+" にメールを送信します。");
+		$("button").text("送信");
+	});
+});
+</script>
+</head>
+<body>
+	<p>メールアドレス : <input type="text" name="name"></p>
+	<button>確認</button>
+</body>
+</html>
+
