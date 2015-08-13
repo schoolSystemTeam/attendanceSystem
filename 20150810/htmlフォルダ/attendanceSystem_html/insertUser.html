@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="design.css">
 		<link rel="stylesheet" href="content.css">
-		<title>パスワード変更画面</title>
+		<title>ユーザー登録画面</title>
 	</head>
 	<body>
 		<div class="container">
@@ -53,24 +53,58 @@
 			</div>
 			
 			<div class="box main-container">
-				<div class="changePass">
-				<p>パスワード変更</p>
+				<div class="insertUser">
+				<p>ユーザー登録</p>
+				
 				<form action="#" method="POST">
 					<table align="center">
 						<tr>
-							<td>旧パスワード</td>
-							<td><input type="text" name="oldPass"></td>
+							<td>名前</td>
+							<td><input type="text" name="name"></td>
 						<tr>
 						<tr>
-							<td>新パスワード</td>
-							<td><input type="text" name="newPass"></td>
+							<td>ID</td>
+							<td><input type="text" name="ID"></td>
 						</tr>
 						<tr>
-							<td>確認用パスワード</td>
-							<td><input type="text" name="checkPass"></td>
+							<td>パスワード</td>
+							<td><input type="password" name="password"></td>
 						<tr>
+						<tr>
+							<td>確認用パスワード</td>
+							<td><input type="password" name="checkPass"></td>
+						<tr>
+						<tr>
+							<td>電話番号</td>
+							<td><input type="text" name="phone"></td>
+						<tr>
+						<tr>
+							<td>Email</td>
+							<td><input type="text" name="Email"></td>
+						</tr>
+						<tr>
+							<td>権限</td>
+							<td><select name="authority">
+									<option value="1">管理者</option>
+									<option value="2">ユーザー</option>
+								</select>
+							</td>
+						<tr>
+						<tr>
+							<td>役割</td>
+							<td><select name="position">
+									<option value="1">講師</option>
+									<option value="2">営業</option>
+								</select>
+							</td>
+						<tr>
+						<tr>
+							<td>表示色</td>
+							<td><input type="submit" value="表示色" action="#"></td>
+						</tr>
 					</table>
-				<p><input type="submit" value="変更">
+					<p><input type="submit" value="変更">
+				</form>
 			</div>
 			
 			<footer class="box footer">
