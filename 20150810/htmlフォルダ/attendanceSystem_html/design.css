@@ -14,7 +14,7 @@ body{
 }
 
 .box-pink{
-	
+
 }
 
 /* 共通のタイトルとユーザー情報,ログアウトのリンクを入れるbox*/
@@ -34,7 +34,7 @@ body{
 
 .main-countainer{
 	width: 100%;
-	
+	margin: 0 auto;
 }
 .footer{
 	width: 100%;
@@ -125,7 +125,7 @@ h1{
 	  list-style: none;
 
 	  position: absolute;
-	  
+
 	  width: 50%;
 
 	  top: 100%;
@@ -167,7 +167,7 @@ h1{
 	  -ms-transition: .2s;
 
 	  transition: .2s;
-	  
+
 	}
 
 	#dropmenu li ul li a{
@@ -175,7 +175,7 @@ h1{
 	  padding: 13px 15px;
 
 	  background: #6e7c0c;
-	  
+
 	  text-align: left;
 
 	  font-size: 12px;
