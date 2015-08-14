@@ -244,3 +244,83 @@ dl dd{
 .holidaylist p{
 	margin-left:50%;
 }
+
+/*休憩時間設定用CSS*/
+.restbox{
+
+	border-bottom: solid 3px #000000;
+	margin-left:auto;
+	margin-right:auto;
+	width:98%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+.dayOfWeekbox{
+
+	border : none;
+	/*width:20%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;*/
+
+}
+
+.setRestTimebox{
+
+	border : none;
+	/*-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;*/
+}
+
+.weekboxHeight{
+
+	margin-top: 32px;
+	text-align: center;
+
+}
+
+.setRestTimebox p{
+	margin-top:3px;
+	margin-bottom: 3px;
+}
+
+.restbox input[type="submit"]{
+
+	margin-top: 30px;
+	width:400px;
+	height:70px;
+	font-size: x-large;
+	font-weight: bold;
+
+}
+
+#dayofWeekTitle{
+
+	width: 20%;
+	background-color: #CEF6F5;
+	text-align: center;
+	font-weight: bold;
+	border: solid 2px #000000;
+
+}
+
+#setRestTimeTitle{
+
+	width : 100%;
+	background-color: #ECF6CE;
+	text-align: center;
+	font-weight: bold;
+	border: solid 2px #000000;
+}
+
+
