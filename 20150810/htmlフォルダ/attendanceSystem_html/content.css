@@ -111,10 +111,52 @@
 	text-align: center;
 }
 
+.insertUser dd p{
+	text-align: justify;
+	text-justify: distribute-all-lines;
+}
+
+ul.noen{
+	list-style-type: none;
+	float:left;
+}
+
+html,body{
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+div#glayLayer{
+	display:none;
+	position:fixed;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	background:#7BAEB5;
+	filter:alpha(opacity=75);
+	opacity: 0.75;
+}
+* html div#glayLayer{
+	position:absolute;
+}
+#overLayer{
+	display:none;
+	width:400px;
+	background:white;
+	padding:10px;
+	position: fixed;
+	top:50%;
+	left:50%;
+}
+* html #overLayer{
+	position: absolute;
+}
 
 /* 勤務時間表(全体)画面用 */
 .workTime{
-border: 1px solid #000000;
+
 	width:70%;
 	margin: 0 auto;
 }
@@ -221,18 +263,18 @@ border: 1px solid #000000;
 
 
 
-dl{
+.holidaydd dl{
 	width:800px;
 	margin:10px auto;
 }
 
-dl dt{
+.holidaydd dl dt{
 	background: #7CADB6;
 	border-bottom:1px solid #FFFFFF;
 	cursor: pointer;
 }
 
-dl dd{
+.holidaydd dl dd{
 	border: 1px solid #FFFFFF;
 }
 

@@ -5,6 +5,41 @@
 		<link rel="stylesheet" href="design.css">
 		<link rel="stylesheet" href="content.css">
 		<title>ユーザー登録画面</title>
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+			
+			$("dd").hide()
+			$("body").append("<div id='glayLayer'></div><div id='overLayer'></div>");
+			
+			$("#glayLayer").click(function(){
+				$(this).hide();
+				$("#overLayer").hide();
+			});
+			
+			$("dt").click(function(){
+				$("#glayLayer").show()
+				$("#overLayer").show().html($("+dd",this).html()).css({
+					marginTop:"-"+$("#overLayer").height()/2+"px" , 
+					marginLeft:"-"+$("#overLayer").width()/2+"px" 
+				});
+				
+				$("#overLayer button").click(function(){
+					$("#glayLayer").hide();
+					$("#overLayer").hide();
+				});
+				return false;
+			});
+			
+			if($.browser.msie && $.browser.version<7){
+				$(window).scroll(function(){
+					$("#glayLayer").get(0).style.setExpression("top","$(document).scrollTop()+'px'");
+					$("#overLayer").get(0).style.setExpression("top","($(document).scrollTop()+$(window).height()/2)+'px'");
+				});
+			}
+			
+		});
+		</script>
 	</head>
 	<body>
 		<div class="container">
@@ -97,10 +132,38 @@
 						<tr>
 						<tr>
 							<td>表示色</td>
-							<td><input type="button" value="色設定" onclick=""></td>
+							<td>
+								<dl>
+									<dt><button>色設定</button></dt>
+									<dd class="clearfix">
+										<table align="center">
+											<tr>
+												<td><input type="radio" name="color" value="brack" checked>黒</td>
+												<td><input type="radio" name="color" value="gray"><font color="gray">灰色</font></td>
+												<td><input type="radio" name="color" value="red"><font color="red">赤</font></td>
+												<td><input type="radio" name="color" value="orange"><font color="orange">オレンジ</font></td>
+											</tr>
+											</tr>
+												<td><input type="radio" name="color" value="green"><font color="green">緑</font></td>
+												<td><input type="radio" name="color" value="blue"><font color="blue">青</font></td>
+												<td><input type="radio" name="color" value="purple"><font color="purple">紫</font></td>
+												<td><input type="radio" name="color" value="lime"><font color="lime">黄緑</font></td>
+											</tr>
+											<tr>
+												<td><input type="radio" name="color" value="cyan"><font color="cyan">シアン</font></td>
+												<td><input type="radio" name="color" value="beige"><font color="olive">オリーブ</font></td>
+												<td><input type="radio" name="color" value="magenta "><font color="magenta">マゼンタ</font></td>
+												<td><input type="radio" name="color" value="navy"><font color="navy">紺色</font></td>
+											</tr>
+										</table>
+										<button>決定</button>
+									</dd>
+								</dl>
+							</td>
 						</tr>
 					</table>
-					<p><input type="submit" value="変更">
+					<p><input type="submit" value="登録">
+					
 				</form>
 			</div>
 			
