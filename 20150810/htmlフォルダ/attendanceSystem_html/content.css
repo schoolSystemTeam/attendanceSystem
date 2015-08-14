@@ -98,6 +98,7 @@
 }
 
 /* ユーザー登録/ユーザー設定変更画面用CSS */
+
 .insertUser{
 	background-color: #FFFF99;
 	width:40%;
@@ -150,16 +151,23 @@ div#glayLayer{
 	top:50%;
 	left:50%;
 }
+
+#overLayer button{
+	
+}
+
 * html #overLayer{
 	position: absolute;
 }
 
-/* 勤務時間表(全体)画面用 */
-.workTime{
 
+/* 勤務時間表(全体・個人)画面用CSS */
+
+.workTime{
 	width:70%;
 	margin: 0 auto;
 }
+
 .selectbox{
 	border: 1px solid #000000;
 	background-color: #d7d7d7;
@@ -175,6 +183,7 @@ div#glayLayer{
 .worksheet tr{
 	text-align: center;
 }
+
 .worksheet tr:nth-child(even){
 	background: #afeeee;
 }
@@ -301,7 +310,7 @@ div#glayLayer{
 /*休憩時間設定用CSS*/
 .restbox{
 
-	border-bottom: solid 3px #000000;
+	border-bottom: solid 2px #000000;
 	margin-left:auto;
 	margin-right:auto;
 	width:98%;
