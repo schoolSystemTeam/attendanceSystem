@@ -86,9 +86,10 @@
 
 .changePass{
 	background-color: #FFFF99;
-	width:30%;
+	width:40%;
 	height: auto;
 	margin:0 auto;
+	margin-top: 30px;
 	border: 2px solid #000000;
 }
 
@@ -99,9 +100,10 @@
 /* ユーザー登録/ユーザー設定変更画面用CSS */
 .insertUser{
 	background-color: #FFFF99;
-	width:30%;
+	width:40%;
 	height: auto;
 	margin:0 auto;
+	margin-top: 30px;
 	border: 2px solid #000000;
 }
 
@@ -112,14 +114,16 @@
 
 /* 勤務時間表(全体)画面用 */
 .workTime{
-	width:80%;
-	padding-left: 10px;
+border: 1px solid #000000;
+	width:70%;
+	margin: 0 auto;
 }
 .selectbox{
-	border: 2px solid #000000;
+	border: 1px solid #000000;
 	background-color: #d7d7d7;
 	width: 450px;
 	height: auto;
+	padding-bottom:3px;
 }
 
 .worksheet .record{
@@ -133,10 +137,11 @@
 	background: #afeeee;
 }
 
-.worksheet p{
-	margin-left:50%;
+.right{
+	text-align:right;
+	margin-right:35%;
 }
-
+	
 
 /*
 エラー画面用CSS
@@ -172,75 +177,3 @@
 	font-weight: bold;
 }
 
-/*休日設定用CSS*/
-
-#holidayListTitle{
-
-	width: 20%;
-	border: inset 2px #BDBDBD;
-	background-color: #BCF5A9;
-	margin:0 auto;
-	text-align: center;
-	font-weight: bold;
-	font-size: 30px;
-	margin-bottom: 40px;
-
-}
-
-#holidaybox{
-
-	border: 2px solid #333B3E;
-	background-color: #FFFF99;
-	margin: 0 auto;
-}
-
-.holidayForm{
-	border: 1px solid #333B3E;
-	background-color: #FFFF99;
-	margin: 0 auto;
-}
-
-#holidayFormTitle{
-
-	width: 800px;
-	margin:0 auto;
-	border-bottom :1px solid #FFFFFF;
-	background: #7CADB6;
-}
-
-
-
-dl{
-	width:800px;
-	margin:10px auto;
-}
-
-dl dt{
-	background: #7CADB6;
-	border-bottom:1px solid #FFFFFF;
-	cursor: pointer;
-}
-
-dl dd{
-	border: 1px solid #FFFFFF;
-}
-
-.holidaylist{
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.holidaylist .record{
-	background: #d2d2d2;
-}
-
-.holidaylist tr{
-	text-align: center;
-}
-.holidaylist tr:nth-child(even){
-	background: #afeeee;
-}
-
-.holidaylist p{
-	margin-left:50%;
-}
