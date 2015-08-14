@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="design.css">
 		<link rel="stylesheet" href="content.css">
-		<title>勤務時間表(全体)画面</title>
+		<title>勤務時間表(個人)画面</title>
 	</head>
 	<body>
 		<div class="container">
@@ -14,7 +14,7 @@
 
 			<div class="box width70 clearfix">
 				<div class="userInfo float-left">
- 					<p>ユーザー名 : admin / 権限 : 管理者</p>
+  					<p>ユーザー名: admin / 権限: 管理者</p>
 				</div>
 				<div class="userInfo float-right">
 					<p><a href="#">ログアウト</a></p>
@@ -114,18 +114,6 @@
 								<input type="radio" name="work" value="period">期間
 								&nbsp;&nbsp;&nbsp;<input type="submit" value="表示">
 					</div>
-					<div class="selectbox">
-					<p>検索メニュー</p>
-					氏名 <select name="user">
-							<option value="1">Aさん</option>
-							<option value="2">Bさん</option>
-							<option value="3">Cさん</option>
-							<option value="4">Dさん</option>
-						</select>
-					<span style="margin-left:50%;">
-					<input type="submit" value="検索">
-					<input type="submit" value="全件表示"></span>
-					</div>
 			
 			<br>
 			<p>表示期間 : 20XX年X月XX日 ～ 20XX年X月XX日
@@ -133,13 +121,48 @@
 			
 			<div class="worksheet">
 			<table>
-				<tr class="record"><td>氏名</td><td>出勤日合計</td><td>欠席日数</td><td>営業日数</td><td>休憩時間</td><td>労働時間合計</td><td>月平均労働時間</td><td>週平均労働時間</td></tr>
-				<tr><td><a href="#">神田太郎</a></td><td>21</td><td>0</td><td>22</td><td>22.0</td><td>124.0</td><td>5.6</td><td>5.6</td></tr>
-				<tr><td><a href="#">東京太郎</a></td><td>21</td><td>1</td><td>22</td><td>22.0</td><td>124.0</td><td>5.6</td><td>5.6</td></tr>
-				<tr><td><a href="#">秋葉流</a></td><td>22</td><td>0</td><td>22</td><td>22.0</td><td>132.0</td><td>6</td><td>6</td></tr>
-				<tr><th>合計</th><th>64</th><th>1</th><th>66</th><th>66.0</th><th>380.0</th><th>17.2</th><th>17.2</th></tr>
-				<tr><th>平均</th><th>21.3</th><th>0.3</th><th>22.0</th><th>22.0</th><th>126.6</th><th>5.7</th><th>5.7</th></tr>
+				<caption>神田太郎出勤表</caption>
+				<tr class="record"><td>日付</td><td>曜日</td><td>出勤</td><td>退勤</td><td>休憩時間</td><td>実働時間</td><td>ステータス</td><td>備考欄</td></tr>
+				<tr><td>2015/X/1</td><td>月</td><td>9:00</td><td>18:00</td><td>1.0</td><td>8.0</td>
+					<td><select name="status">
+							<option value="1">代休</option>
+							<option value="2">代出</option>
+							<option value="3">休み</option>
+							<option value="4">早退</option>
+							<option value="5">遅番</option>
+						</select>
+					</td>
+					<td><textarea name="etc" rows="3" cols="15"></textarea></td>
+				</tr>
+				<tr><td>2015/X/2</td><td>月</td><td>9:00</td><td>18:00</td><td>1.0</td><td>8.0</td>
+					<td><select name="status">
+							<option value="1">代休</option>
+							<option value="2">代出</option>
+							<option value="3">休み</option>
+							<option value="4">早退</option>
+							<option value="5">遅番</option>
+						</select>
+					</td>
+					<td><textarea name="etc" rows="3" cols="15"></textarea></td>
+				</tr>
+				<tr><td colspan="8">・</td></tr>
+				<tr><td colspan="8">・</td></tr>
+				<tr><td colspan="8">・</td></tr>
+				<tr><td>2015/X/2</td><td>月</td><td>9:00</td><td>18:00</td><td>1.0</td><td>8.0</td>
+					<td cellpadding="0"><select name="status">
+							<option value="1">代休</option>
+							<option value="2">代出</option>
+							<option value="3">休み</option>
+							<option value="4">早退</option>
+							<option value="5">遅番</option>
+						</select>
+					</td>
+					<td><textarea name="etc" rows="3" cols="15"></textarea></td>
+				</tr>
+				<tr><th>合計</th><th></th><th></th><th></th><th>22.0</th><th>124.0</th><th></th><th></th></tr>
+				<tr><th>平均</th><th></th><th></th><th></th><th>1.0</th><th>8.0</th><th></th><th></th></tr>
 			</table>
+			<div class="right"><button>記録</button></div>
 			<p class="right"><button>excelに出力</button>　　<button>PDFに出力</button></p>
 			</div>
 			</div>

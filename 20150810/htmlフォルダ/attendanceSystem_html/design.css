@@ -1,11 +1,10 @@
 ﻿@charset "UTF-8";
 
 body{
- background-color: #fffaf0;
+	background-color: #ddd;
 }
 
 .box{
-	border:2px solid #ff0000;
 }
 
 .float-left{
@@ -23,23 +22,22 @@ body{
 }
 
 .container{
-	border: 2px solid #000000;
+	background-color: #fff;
 	height: auto;
-	width: 1200px;
-	margin: 20px auto;
+	width: 1000px;
+	margin: 0px auto;
 }
 
 /* 共通のタイトルを入れるボックス*/
 
 .title{
-	width: 70%;
 	margin: 0 auto;
 }
 
 /* ユーザー情報とログアウトリンクを入れるボックス*/
 
 .width70{
-	width: 70%;
+	width: 98%;
 	margin: 0 auto;
 }
 
@@ -88,7 +86,7 @@ h1{
 
 #dropmenu{
 	list-style-type: none;
-	width: 80%;
+	width: 98%;
 	height: 40px;
 	margin: 0 auto;
 	padding: 0;
