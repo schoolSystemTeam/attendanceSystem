@@ -7,6 +7,25 @@
 		<title>ユーザー登録画面</title>
 		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
 		<script type="text/javascript">
+		
+			window.onload = function(){
+		
+				// button要素の取得
+   				var btns = document.getElementsByTagName('input');
+  				console.log(btns);
+		
+				var colordata1 = document.getElementById('colordata1');
+    			var colordata2 = document.getElementById('colordata2');
+    			
+    			// 取得した要素にそれぞれイベントを設定　（推奨）
+    			for (var i=8; i<btns.length; i++) {
+       				btns[i].onclick = function(){
+           				 date3.innerHTML = this.getAttribute('value');
+           				 date4.value = this.getAttribute('value');
+       				 }
+    			}
+			}
+		
 			$(function(){
 			
 			$("dd").hide()
@@ -134,11 +153,11 @@
 							<td>表示色</td>
 							<td>
 								<dl>
-									<dt><button>色設定</button></dt>
+									<dt><button>色設定</button><span id="colordata1"></span></dt>
 									<dd class="clearfix">
 										<table align="center">
 											<tr>
-												<td><input type="radio" name="color" value="brack" checked>黒</td>
+												<td><input type="radio" name="color" value="brack">黒</td>
 												<td><input type="radio" name="color" value="gray"><font color="gray">灰色</font></td>
 												<td><input type="radio" name="color" value="red"><font color="red">赤</font></td>
 												<td><input type="radio" name="color" value="orange"><font color="orange">オレンジ</font></td>
@@ -163,7 +182,7 @@
 						</tr>
 					</table>
 					<p><input type="submit" value="登録">
-					
+					<input type="hidden" name="color" value="">
 				</form>
 			</div>
 			

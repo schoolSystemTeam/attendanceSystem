@@ -173,7 +173,8 @@ div#glayLayer{
 	background-color: #d7d7d7;
 	width: 450px;
 	height: auto;
-	padding-bottom:3px;
+	padding-left: 5px;
+	padding-bottom: 3px;
 }
 
 .worksheet .record{
@@ -182,6 +183,10 @@ div#glayLayer{
 
 .worksheet tr{
 	text-align: center;
+}
+
+.worksheet tr td{
+	padding: 1px 6px;
 }
 
 .worksheet tr:nth-child(even){
