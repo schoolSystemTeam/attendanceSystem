@@ -7,56 +7,71 @@
 		<title>ユーザー登録画面</title>
 		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
 		<script type="text/javascript">
-		
+
 			window.onload = function(){
-		
+
 				// button要素の取得
    				var btns = document.getElementsByTagName('input');
   				console.log(btns);
-		
+
 				var colordata1 = document.getElementById('colordata1');
     			var colordata2 = document.getElementById('colordata2');
-    			
+
     			// 取得した要素にそれぞれイベントを設定　（推奨）
-    			for (var i=8; i<btns.length; i++) {
+    			for (var i=12; i<btns.length; i++) {
        				btns[i].onclick = function(){
-           				 date3.innerHTML = this.getAttribute('value');
-           				 date4.value = this.getAttribute('value');
+       					colordata1.innerHTML = this.getAttribute('value');
+       					colordata2.value = this.getAttribute('value');
        				 }
     			}
 			}
-		
+
 			$(function(){
-			
+
 			$("dd").hide()
 			$("body").append("<div id='glayLayer'></div><div id='overLayer'></div>");
-			
+
 			$("#glayLayer").click(function(){
 				$(this).hide();
 				$("#overLayer").hide();
 			});
-			
+
 			$("dt").click(function(){
 				$("#glayLayer").show()
 				$("#overLayer").show().html($("+dd",this).html()).css({
-					marginTop:"-"+$("#overLayer").height()/2+"px" , 
-					marginLeft:"-"+$("#overLayer").width()/2+"px" 
+					marginTop:"-"+$("#overLayer").height()/2+"px" ,
+					marginLeft:"-"+$("#overLayer").width()/2+"px"
 				});
-				
+
+				// button要素の取得
+   				var btns = document.getElementsByTagName('input');
+  				console.log(btns);
+
+				var colordata1 = document.getElementById('colordata1');
+    			var colordata2 = document.getElementById('colordata2');
+
+    			// 取得した要素にそれぞれイベントを設定　（推奨）
+    			for (var i=12; i<btns.length; i++) {
+       				btns[i].onclick = function(){
+       					colordata1.innerHTML = this.getAttribute('value');
+       					colordata2.value = this.getAttribute('value');
+       				 }
+    			}
+
 				$("#overLayer button").click(function(){
 					$("#glayLayer").hide();
 					$("#overLayer").hide();
 				});
 				return false;
 			});
-			
+
 			if($.browser.msie && $.browser.version<7){
 				$(window).scroll(function(){
 					$("#glayLayer").get(0).style.setExpression("top","$(document).scrollTop()+'px'");
 					$("#overLayer").get(0).style.setExpression("top","($(document).scrollTop()+$(window).height()/2)+'px'");
 				});
 			}
-			
+
 		});
 		</script>
 	</head>
@@ -65,7 +80,7 @@
 			<header class="box">
 				<h1 class="title">勤怠管理システム</h1>
 			</header>
-			
+
 			<div class="box width70 clearfix">
 				<div class="userInfo float-left">
 					<p>ユーザー名 : admin / 権限 : 管理者</p>
@@ -74,7 +89,7 @@
 					<p><a href="login.html">ログアウト</a></p>
 				</div>
 			</div>
-			
+
 			<div class="box menu"><!-- ヘッダーメニュー-->
 				<ul id="dropmenu">
 	 				<li><a href="#">メニュー</a>
@@ -92,7 +107,7 @@
 	  				<li><a href="#">ユーザー設定</a>
 	   					<ul>
      					 	<li><a href="changePassword.html">パスワード変更</a></li>
-	     					<li><a href="#">ユーザー設定変更</a></li> 
+	     					<li><a href="#">ユーザー設定変更</a></li>
 	     					<li><a href="#">ユーザー登録</a></li>
 	   					</ul>
 	  				</li>
@@ -102,11 +117,11 @@
 	  				</li>
 				</ul>
 			</div>
-			
+
 			<div class="box main-container">
 				<div class="insertUser">
 				<p>ユーザー登録</p>
-				
+
 				<form action="#" method="POST">
 					<table align="center">
 						<tr>
@@ -153,7 +168,7 @@
 							<td>表示色</td>
 							<td>
 								<dl>
-									<dt><button>色設定</button><span id="colordata1"></span></dt>
+									<dt><button>色設定</button> <span id="colordata1"></span></dt>
 									<dd class="clearfix">
 										<table align="center">
 											<tr>
@@ -162,7 +177,7 @@
 												<td><input type="radio" name="color" value="red"><font color="red">赤</font></td>
 												<td><input type="radio" name="color" value="orange"><font color="orange">オレンジ</font></td>
 											</tr>
-											</tr>
+											<tr>
 												<td><input type="radio" name="color" value="green"><font color="green">緑</font></td>
 												<td><input type="radio" name="color" value="blue"><font color="blue">青</font></td>
 												<td><input type="radio" name="color" value="purple"><font color="purple">紫</font></td>
@@ -181,15 +196,15 @@
 							</td>
 						</tr>
 					</table>
+    				<input type="hidden" name="color" value="colordata2" >
 					<p><input type="submit" value="登録">
-					<input type="hidden" name="color" value="">
 				</form>
 			</div>
-			
+
 			<footer class="box footer">
 				<p>Copyright © 2010-2015 FusionOne Co.,Ltd. All Rights Reserved.</p>
 			</footer>
-		
+
 		</div>
 	</body>
 </html>
