@@ -5,6 +5,20 @@ $year = date('Y');
 $month = date('n');
 $today = date('j');
 
+//去年、来年に遷移する際の処理
+if(isset($_GET["kyonen"])){
+	$year -= $_GET["kyonen"];
+}else if(isset($_GET["rainen"])){
+	$year += $_GET["rainen"];
+}
+
+//先月、翌月に遷移する際の処理
+if(isset($_GET["sengetu"])){
+	$month -= $_GET["sengetu"];
+}else if(isset($_GET["yokugetu"])){
+	$month += $_GET["yokugetu"];
+}
+
 //フォントの色を黒で初期化
 $fontcolor = "#000000";
 
@@ -12,12 +26,13 @@ $fontcolor = "#000000";
 $weekday = array( "日", "月", "火", "水", "木", "金", "土" );
 
 // 月末日を取得
-$last_day = date('j', mktime(0, 0, 0, $month + 1, 0, $year));
+$last_day = date('j', mktime(0, 0, 0, $month  , 0, $year));
 
 $calendar = array();
 $j = 0;
 
 // 月末日までループ
+
 for ($i = 1; $i < $last_day + 1; $i++) {
 
     // 曜日を取得
@@ -71,9 +86,10 @@ for ($i = 1; $i < $last_day + 1; $i++) {
 		} );
 
 		jQuery( function() {
-		    jQuery( '#jquery-ui-dialog-opener' ) . click( function() {
+		    jQuery( '#jquery-ui-dialog-opener_1' ) . click( function() {
 		        jQuery( '#jquery-ui-dialog' ) . dialog( 'open' );
 		    } );
+		    var date = $('span#date').text();
 		    var name = jQuery( '#jquery-ui-dialog-form-name' );
 		    var hour = jQuery( '#jquery-ui-dialog-form-hour' );
 		    var minute = jQuery( '#jquery-ui-dialog-form-minute' );
@@ -122,8 +138,7 @@ for ($i = 1; $i < $last_day + 1; $i++) {
 		        buttons: {
 	            '変更': function() {
 	                if ( hour2 . val() ) {
-	                    jQuery( 'div#work' ) . html(
-	    	                '<span id="change">神田太郎</span> ' +
+	                    jQuery( 'span#time' ) . text(
 	    	                hour2 . val() + ':' + minute2 . val() +
 	    	                '~' + endhour2 . val() + ':' + endminute2 . val()
 	                    );
@@ -140,16 +155,12 @@ for ($i = 1; $i < $last_day + 1; $i++) {
 		</script>
 		<style>
 		<!--
-			#jquery-ui-dialog-table {
-		    	font-size: 13px;
-			}
-
-			#jquery-ui-dialog-table th , #jquery-ui-dialog-table td {
-   				border: 1px solid gray;
-			}
-
 			#jquery-ui-tabs {
    				font-size: 16px;
+			}
+
+			#jquery-ui-tabs ul li{
+				float: right;
 			}
 		-->
 		</style>
@@ -175,58 +186,189 @@ for ($i = 1; $i < $last_day + 1; $i++) {
 	 				<li><a href="#">メニュー</a>
 	   			 		<ul>
 	    				</ul>
-	 				</li>
-	  				<li><a href="#">勤務時間表</a>
+	 				 </li>
+	  				<li><a href="ovarallWarkTime.html">勤務時間表</a>
 	   					<ul>
 	   					</ul>
 	 				</li>
-	 				<li><a href="#">休日設定</a>
+	 				<li><a href="settingHoliday.html">休日設定</a>
 	    				<ul>
 	   					</ul>
 	 				</li>
 	  				<li><a href="#">ユーザー設定</a>
 	   					<ul>
-     					 	<li><a href="#">パスワード変更</a></li>
-	     					<li><a href="#">ユーザー設定変更</a></li>
-	     					<li><a href="#">ユーザー登録</a></li>
+     					 	<li><a href="changePassword.html">パスワード変更</a></li>
+	     					<li><a href="updateUser.html">ユーザー設定変更</a></li>
+	     					<li><a href="insertUser.html">ユーザー登録</a></li>
 	   					</ul>
 	  				</li>
-	  				<li><a href="#">休憩時間設定</a>
+	  				<li><a href="settingRestTime.html">休憩時間設定</a>
 	   					<ul>
 	   					</ul>
 	  				</li>
 				</ul>
 			</div>
 
-			<div class="box main-container mainMenuCalendar">
+			<div class="box main-container mainMenuCalendar clearfix">
 				<br>
 				<br>
 
 				<div id="jquery-ui-tabs">
     				<ul>
-        				<li><a href="#jquery-ui-tabs-1">1ヶ月</a></li>
+    					<li><a href="#jquery-ui-tabs-3">3ヶ月</a></li>
         				<li><a href="#jquery-ui-tabs-2">2ヶ月</a></li>
-        				<li><a href="#jquery-ui-tabs-3">3ヶ月</a></li>
+        				<li><a href="#jquery-ui-tabs-1">1ヶ月</a></li>
     				</ul>
     				<div id="jquery-ui-tabs-1">
 
 				<table>
-					<tr>
-						<th width="100%" colspan="7" style="background-color: #B3F8FA; text-align: center; font-weight: bold;">
-							<a href="#">&lt;&lt;</a> &nbsp;&nbsp; <a href="#">&lt;</a> &nbsp;&nbsp;&nbsp;
-							<?php echo $year; ?>年<?php echo $month; ?>月
-							&nbsp;&nbsp; <a href="#">&gt;</a> &nbsp;&nbsp;&nbsp; <a href="#">&gt;&gt;</a>
-						</th>
-					<tr>
-    				<tr>
-        				<th style="color: red;">日</th>
-        				<th>月</th>
-        				<th>火</th>
-       					 <th>水</th>
-        				<th>木</th>
-        				<th>金</th>
-        				<th style="color: blue;">土</th>
+			<tr>
+				<th width="100%" colspan="7" style="background-color: #B3F8FA; text-align: center; font-weight: bold;">
+					<a href="mainMenu-admin.php?kyonen=1">&lt;&lt;</a> &nbsp;&nbsp; <a href="mainMenu-admin.php?sengetu=1">&lt;</a> &nbsp;&nbsp;&nbsp;
+					<?php echo $year; ?>年<?php echo $month; ?>月
+					&nbsp;&nbsp; <a href="mainMenu-admin.php?yokugetu=1">&gt;</a> &nbsp;&nbsp;&nbsp; <a href="mainMenu-admin.php?rainen=1">&gt;&gt;</a>
+				</th>
+			</tr>
+    		<tr>
+        		<th style="color: red;">日</th>
+        		<th>月</th>
+        		<th>火</th>
+       			<th>水</th>
+        		<th>木</th>
+        		<th>金</th>
+        		<th style="color: blue;">土</th>
+    		</tr>
+
+    			<tr>
+    				<?php $cnt = 0; ?>
+    				<?php foreach ($calendar as $key => $value): ?>
+
+					<?php
+						if($value['day'] == $today){
+							$stylecolor="#EEF1F1";
+						}else{
+							$stylecolor="#FFFFFF";
+						}
+
+        				if($cnt == 0){
+							$fontcolor="red";
+    					}else if($cnt == 6){
+							$fontcolor="blue";
+    					}else{
+    						$fontcolor="#000000";
+    					}
+        			?>
+
+						<td date="insert" style="background-color: <?php echo $stylecolor;?>; color:<?php echo $fontcolor;?>;">
+        					<?php $cnt++; ?>
+
+        					<div id="jquery-ui-dialog-opener_<?=$value['day']?>" class="day-calendar">
+        						<?php echo $value['day']; ?>
+       						</div>
+        					<?php if($value['day'] == 8){?>
+        					<div class="work-calendar">
+        						<div id="work"><span id="change">神田太郎</span>  <span id="time">12:00~18:00</span>  講</div>
+        					</div>
+        					<?php }?>
+        				</td>
+
+
+    					<?php if ($cnt == 7): ?>
     				</tr>
+
+    				<tr>
+    					<?php $cnt = 0; ?>
+
+   						<?php endif; ?>
+    					<?php endforeach; ?>
+   				 	</tr>
+				</table>
+				</div>
+    <div id="jquery-ui-tabs-2">
+    	<?php for($a=0;$a<2;$a++){ ?>
+        <table>
+			<tr>
+				<th width="100%" colspan="7" style="background-color: #B3F8FA; text-align: center; font-weight: bold;">
+					<a href="mainMenu-admin.php?kyonen=1">&lt;&lt;</a> &nbsp;&nbsp; <a href="mainMenu-admin.php?sengetu=1">&lt;</a> &nbsp;&nbsp;&nbsp;
+					<?php echo $year ; ?>年<?php echo $month + $a; ?>月
+					&nbsp;&nbsp; <a href="mainMenu-admin.php?yokugetu=1">&gt;</a> &nbsp;&nbsp;&nbsp; <a href="mainMenu-admin.php?rainen=1">&gt;&gt;</a>
+				</th>
+			</tr>
+    		<tr>
+        		<th style="color: red;">日</th>
+        		<th>月</th>
+        		<th>火</th>
+       			<th>水</th>
+        		<th>木</th>
+        		<th>金</th>
+        		<th style="color: blue;">土</th>
+    		</tr>
+
+    			<tr>
+    				<?php $cnt = 0; ?>
+    				<?php foreach ($calendar as $key => $value): ?>
+
+					<?php
+						if($value['day'] == $today){
+							$stylecolor="#EEF1F1";
+						}else{
+							$stylecolor="#FFFFFF";
+						}
+
+        				if($cnt == 0){
+							$fontcolor="red";
+    					}else if($cnt == 6){
+							$fontcolor="blue";
+    					}else{
+    						$fontcolor="#000000";
+    					}
+        			?>
+
+						<td date="insert" style="background-color: <?php echo $stylecolor;?>; color:<?php echo $fontcolor;?>;">
+        					<?php $cnt++; ?>
+
+        					<div id="jquery-ui-dialog-opener_<?=$value['day']?>" class="day-calendar">
+        						<?php echo $value['day']; ?>
+       						</div>
+        					<?php if($value['day'] == 8){?>
+        					<div class="work-calendar">
+        						<div id="work"><span id="change">神田太郎</span>  <span id="time">12:00~18:00</span>  講</div>
+        					</div>
+        					<?php }?>
+        				</td>
+
+
+    					<?php if ($cnt == 7): ?>
+    				</tr>
+
+    				<tr>
+    					<?php $cnt = 0; ?>
+
+   						<?php endif; ?>
+    					<?php endforeach; ?>
+   				 	</tr>
+				</table>
+			<?php }?>
+			</div>
+    <div id="jquery-ui-tabs-3">
+    	<?php for($i=0 ;$i<3 ;$i++){?>
+        <table>
+			<tr>
+				<th width="100%" colspan="7" style="background-color: #B3F8FA; text-align: center; font-weight: bold;">
+					<a href="mainMenu-admin.php?kyonen=1">&lt;&lt;</a> &nbsp;&nbsp; <a href="mainMenu-admin.php?sengetu=1">&lt;</a> &nbsp;&nbsp;&nbsp;
+					<?php echo $year ; ?>年<?php echo $month + $i; ?>月
+					&nbsp;&nbsp; <a href="mainMenu-admin.php?yokugetu=1">&gt;</a> &nbsp;&nbsp;&nbsp; <a href="mainMenu-admin.php?rainen=1">&gt;&gt;</a>
+				</th>
+			</tr>
+    		<tr>
+        		<th style="color: red;">日</th>
+        		<th>月</th>
+        		<th>火</th>
+       			<th>水</th>
+        		<th>木</th>
+        		<th>金</th>
+        		<th style="color: blue;">土</th>
+    		</tr>
 
     				<tr>
     					<?php $cnt = 0; ?>
@@ -257,7 +399,7 @@ for ($i = 1; $i < $last_day + 1; $i++) {
        						</div>
         					<?php if($value['day'] == 8){?>
         					<div class="work-calendar">
-        						<div id="work"><span id="change">神田太郎</span>  12:00~18:00  講</div>
+        						<div id="work"><span id="change">神田太郎</span>  <span id="time">12:00~18:00</span>  講</div>
         					</div>
         					<?php }?>
         				</td>
@@ -273,34 +415,12 @@ for ($i = 1; $i < $last_day + 1; $i++) {
     					<?php endforeach; ?>
    				 	</tr>
 				</table>
-				</div>
-    <div id="jquery-ui-tabs-2">
-        <p>タブメニュー②の内容。</p>
-        <p>ページ読み込み時に、タブメニュー②の内容を表示させるように設定した。</p>
-    </div>
-    <div id="jquery-ui-tabs-3">
-        <p>タブメニュー③の内容。</p>
+				<?php }?>
     </div>
 </div>
 			</div>
 
-<table id="jquery-ui-dialog-table" class="ui-widget ui-widget-content">
-    <thead>
-        <tr class="ui-widget-header ">
-            <th id="table-th-name">名前</th>
-            <th id="table-th-hour">時間</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>ALPHASIS</td>
-            <td>Hellow!</td>
-        </tr>
-    </tbody>
-</table>
-<div class="jquery-ui-button">
-    <button id="jquery-ui-dialog-opener">追加</button>
-</div>
+
 
 <div id="jquery-ui-dialog" title="勤務登録">
     <form>

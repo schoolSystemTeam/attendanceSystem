@@ -107,11 +107,11 @@
 	  				<li><a href="#">ユーザー設定</a>
 	   					<ul>
      					 	<li><a href="changePassword.html">パスワード変更</a></li>
-	     					<li><a href="#">ユーザー設定変更</a></li>
-	     					<li><a href="#">ユーザー登録</a></li>
+	     					<li><a href="updateUser.html">ユーザー設定変更</a></li>
+	     					<li><a href="insertUser.html">ユーザー登録</a></li>
 	   					</ul>
 	  				</li>
-	  				<li><a href="#">休憩時間設定</a>
+	  				<li><a href="settingRestTime.html">休憩時間設定</a>
 	   					<ul>
 	   					</ul>
 	  				</li>
@@ -167,32 +167,26 @@
 						<tr>
 							<td>表示色</td>
 							<td>
-								<dl>
-									<dt><button>色設定</button> <span id="colordata1"></span></dt>
-									<dd class="clearfix">
-										<table align="center">
-											<tr>
-												<td><input type="radio" name="color" value="brack">黒</td>
-												<td><input type="radio" name="color" value="gray"><font color="gray">灰色</font></td>
-												<td><input type="radio" name="color" value="red"><font color="red">赤</font></td>
-												<td><input type="radio" name="color" value="orange"><font color="orange">オレンジ</font></td>
-											</tr>
-											<tr>
-												<td><input type="radio" name="color" value="green"><font color="green">緑</font></td>
-												<td><input type="radio" name="color" value="blue"><font color="blue">青</font></td>
-												<td><input type="radio" name="color" value="purple"><font color="purple">紫</font></td>
-												<td><input type="radio" name="color" value="lime"><font color="lime">黄緑</font></td>
-											</tr>
-											<tr>
-												<td><input type="radio" name="color" value="cyan"><font color="cyan">シアン</font></td>
-												<td><input type="radio" name="color" value="beige"><font color="olive">オリーブ</font></td>
-												<td><input type="radio" name="color" value="magenta "><font color="magenta">マゼンタ</font></td>
-												<td><input type="radio" name="color" value="navy"><font color="navy">紺色</font></td>
-											</tr>
-										</table>
-										<button>決定</button>
-									</dd>
-								</dl>
+								<table align="center" id="font">
+									<tr>
+										<td><input type="radio" name="color" value="brack">黒</td>
+										<td><input type="radio" name="color" value="gray"><font color="gray">灰色</font></td>
+										<td><input type="radio" name="color" value="red"><font color="red">赤</font></td>
+										<td><input type="radio" name="color" value="orange"><font color="orange">オレンジ</font></td>
+									</tr>
+									<tr>
+										<td><input type="radio" name="color" value="green"><font color="green">緑</font></td>
+										<td><input type="radio" name="color" value="blue"><font color="blue">青</font></td>
+										<td><input type="radio" name="color" value="purple"><font color="purple">紫</font></td>
+										<td><input type="radio" name="color" value="lime"><font color="lime">黄緑</font></td>
+									</tr>
+									<tr>
+										<td><input type="radio" name="color" value="cyan"><font color="cyan">シアン</font></td>
+										<td><input type="radio" name="color" value="beige"><font color="olive">オリーブ</font></td>
+										<td><input type="radio" name="color" value="magenta "><font color="magenta">マゼンタ</font></td>
+										<td><input type="radio" name="color" value="navy"><font color="navy">紺色</font></td>
+									</tr>
+								</table>
 							</td>
 						</tr>
 					</table>

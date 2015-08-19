@@ -185,7 +185,11 @@ div#glayLayer{
 	text-align: center;
 }
 
+.worksheet tr th{
+}
+
 .worksheet tr td{
+	width: auto;
 	padding: 1px 6px;
 }
 
