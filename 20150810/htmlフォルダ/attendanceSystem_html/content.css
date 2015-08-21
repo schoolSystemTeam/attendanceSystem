@@ -101,20 +101,27 @@
 
 .insertUser{
 	background-color: #FFFF99;
-	width:40%;
+	width:50%;
 	height: auto;
 	margin:0 auto;
 	margin-top: 30px;
 	border: 2px solid #000000;
 }
 
+.insertUser #padding{
+	padding: 0px;
+}
+
 .insertUser p{
 	text-align: center;
 }
 
-.insertUser dd p{
-	text-align: justify;
-	text-justify: distribute-all-lines;
+.insertUser table{
+	text-align: center;
+}
+
+.insertUser td table td{
+	text-align: left;
 }
 
 ul.noen{
@@ -185,11 +192,7 @@ div#glayLayer{
 	text-align: center;
 }
 
-.worksheet tr th{
-}
-
 .worksheet tr td{
-	width: auto;
 	padding: 1px 6px;
 }
 
@@ -199,7 +202,7 @@ div#glayLayer{
 
 .right{
 	text-align:right;
-	margin-right:35%;
+	margin-right:18%;
 }
 
 
@@ -262,11 +265,10 @@ div#glayLayer{
 
 	border: 2px solid #333B3E;
 	background-color: #FFFF99;
-	margin: 0 auto;
+	margin-right: 100px
 }
 
 .holidayForm{
-	border: 1px solid #333B3E;
 	background-color: #FFFF99;
 	margin: 0 auto;
 }
@@ -308,6 +310,11 @@ div#glayLayer{
 .holidaylist tr{
 	text-align: center;
 }
+
+.holidaylist tr td{
+	padding: 2px 7px;
+}
+
 .holidaylist tr:nth-child(even){
 	background: #afeeee;
 }
@@ -404,8 +411,8 @@ div#glayLayer{
     background: #EEEEEE;
 }
 
- .mainMenuCalendar table th,
-table td {
+.mainMenuCalendar table th,
+.mainMenuCalendar table td {
     border: 1px solid #CCCCCC;
     width: 14.28%;
     padding: 5px;
@@ -420,8 +427,8 @@ table td {
 	text-decoration: underline;
 }
 
-#change:hover{
-	opacity: 0.75;
+#change:hover,.day-calendar:hover{
+	opacity: 0.5;
 	cursor: pointer;
 }
 
@@ -447,3 +454,62 @@ table td {
 	color: #000000;
 
 }
+
+button.workTimeButton{
+	font-size: 1.4em;
+    font-weight: bold;
+    padding: 10px 30px;
+}
+
+#allSetForm{
+
+	width: 100%;
+	text-align:center;
+
+}
+
+#acMenu dt{
+    display:block;
+    background:#adff2f;
+    width:100%;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    border:#666 1px solid;
+    cursor:pointer;
+    }
+#acMenu dd{
+    width:100%;
+    height:auto;
+    text-align:center;
+    display:hidden;
+    margin: 10 auto;
+    }
+
+#tabMenu{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+ #tabMenu ul{
+    width:600px;
+
+    }
+#tabMenu li{
+    float:left;
+     list-style:none;
+    }
+#tabMenu li a{
+    display:block;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align:center;
+    border:#ccc 1px solid;
+    }
+
+#tabBox2{
+    display:none;
+    }
+
+
